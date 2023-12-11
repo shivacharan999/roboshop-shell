@@ -5,9 +5,7 @@ ZONE_ID="Z03088242QQ20LKKZLQT6"
 DOMAIN="devsig90.onliine"
 SG_NAME="ALLOW_ALL"
 env=dev
-#############################
-
-
+############################
 
 create_ec2() {
   PRIVATE_IP=$(aws ec2 run-instances \
@@ -47,6 +45,3 @@ for component in catalogue cart user shipping payment frontend mongodb mysql rab
   COMPONENT="${component}-${env}"
   create_ec2
 done
-
-
-
