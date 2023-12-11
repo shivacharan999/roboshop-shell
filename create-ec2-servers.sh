@@ -4,6 +4,7 @@
 ZONE_ID="ZZ029691117RLJ60P2VQJJ"
 DOMAIN="devsig90.onliine"
 SG_NAME="ALLOW_ALL"
+env=dev
 #############################
 
 
@@ -43,6 +44,6 @@ fi
 
 
 for component in catalogue cart user shipping payment frontend mongodb mysql rabbitmq redis dispatch; do
-  COMPONENT="${component}"
+  COMPONENT="${component}-${env}"
   create_ec2
 done
