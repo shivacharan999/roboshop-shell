@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ##### Change these values ###
-ZONE_ID="Z030984927YH0FX1SHQRK"
+ZONE_ID="Z03088242QQ20LKKZLQT6"
 DOMAIN="devsig90.onliine"
 SG_NAME="ALLOW_ALL"
 env=dev
@@ -47,3 +47,6 @@ for component in catalogue cart user shipping payment frontend mongodb mysql rab
   COMPONENT="${component}-${env}"
   create_ec2
 done
+
+
+
