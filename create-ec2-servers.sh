@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ##### Change these values ###
-ZONE_ID="ZZ029691117RLJ60P2VQJJ"
+ZONE_ID="Z030984927YH0FX1SHQRK"
 DOMAIN="devsig90.onliine"
 SG_NAME="ALLOW_ALL"
 env=dev
