@@ -1,5 +1,5 @@
 ZONE_ID="Z03088242QQ20LKKZLQT6"
-DOMAIN="devsig90.onliine"
+DOMAIN="devsig90.com"
 SG_NAME="ALLOW_ALL"
 
 
