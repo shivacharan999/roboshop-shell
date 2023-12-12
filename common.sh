@@ -48,7 +48,7 @@ if  [ "${schema_type}" == "mongo" ]; then
     status_check $?
 
     print_head "Load Schema"
-    mongo --host mongodb-dev.devsig90.online </app/schema/${component}.js &>>${log_file}
+    mongo --host mongodb.devsig90.com </app/schema/${component}.js &>>${log_file}
     status_check $?
 elif  [ "${schema_type}" == "mysql" ]; then
     print_head "Install MySQL Client"
@@ -56,7 +56,7 @@ elif  [ "${schema_type}" == "mysql" ]; then
     status_check $?
 
     print_head "Load Schema"
-    mysql -h mysql-dev.devsig90.online -uroot -p${mysql_root_password} < /app/schema/shipping.sql &>>${log_file}
+    mysql -h mysql.devsig90.com -uroot -p${mysql_root_password} < /app/schema/shipping.sql &>>${log_file}
     status_check $?
 fi
 }
@@ -139,7 +139,7 @@ java() {
 python() {
 
   print_head "install python "
-  yum install python36 gcc python3-devel -y  &>>${log_file}
+  yum install python36 gcc python3el -y  &>>${log_file}
   status_check $?
   
   app_prereq_setup
