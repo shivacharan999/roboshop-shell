@@ -1,5 +1,5 @@
-curl -sL https://rpm.nodesource.com/setup_lts.x | bash
-yum install nodejs -y
+dnf module disable nodejs -y
+dnf module enable nodejs:18 -y
 useradd roboshop
 mkdir /app 
 rm -rf /app/*
