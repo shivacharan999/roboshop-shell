@@ -1,4 +1,4 @@
-echo -e "\e[35m <<<<<<< Installing >>>>>>> Nginx\e[0m"
+echo -e "\e[35m <<<<<<< Installing Nginx >>>>>>> \e[0m"
 dnf install nginx -y 
 
 echo -e "\e[35m <<<<<<< Removing old content >>>>>>> \e[0m"
