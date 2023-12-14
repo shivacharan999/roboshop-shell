@@ -61,6 +61,8 @@ elif [ "${schema_setup}" == "mysql" ]; then
    print_head "Load schema"
    mysql -h <MYSQL-SERVER-IPADDRESS> -uroot -p${mysql_root_password} < /app/schema/shipping.sql 
    status_check $?
+
+fi
 }
 
 app_prereq_setup() {
