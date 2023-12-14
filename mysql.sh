@@ -29,5 +29,6 @@ systemctl start mysqld   &>>${log_file}
 status_check $?
 
 print_head  " <<<<<<<Reset Password >>>>>>> "
-mysql_secure_installation --set-root-pass ${mysql_root_password}  &>>${log_file}
+echo show databases | mysql -uroot -p${mysql_root_password} &>>${log_file}
+mysql_secure_installation --set-root-pass ${mysql_root_password}  &>>${log_file} ## RoboShop@1
 status_check $?
