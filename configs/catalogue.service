@@ -1,9 +1,6 @@
 [Unit]
 Description = Catalogue Service
 
-[Unit]
-Description = Catalogue Service
-
 [Service]
 User=roboshop
 Environment=MONGO=true
