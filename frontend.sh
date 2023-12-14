@@ -3,7 +3,7 @@ log_file=/tmp/robodhop.log
 rm-rf ${log_file}
 
 print_head() {
-    echo  "\e[36m$1\e[0m"
+    echo -e "\e[36m$1\e[0m"
 }
 
 print_head  " <<<<<<< Installing Nginx >>>>>>> "
