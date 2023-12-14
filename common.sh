@@ -21,6 +21,8 @@ fi
    cp ${code_dir}/configs/${component}.service /etc/systemd/system/${component}.service &>>${log_file}
    status_check $?
 
+   sed -i -e "s/ROBOSHOP_USER_PASSWORD/${roboshop_app_password}/" /etc/systemd/system/${component}.service &>>${log_file}
+   
    print_head  " <<<<<<< Installing Nginx >>>>>>> "
    systemctl daemon-reload &>>${log_file}
    status_check $?
@@ -41,6 +43,7 @@ if [ "$(schema_setup)" == "mongo"]; then
    print_head  " <<<<<<< Installing Nginx >>>>>>> "
    cp ${code_dir}/configs/mongodb.repo /etc/yum.repos.d/mongo.repo &>>${log_file}
    status_check $?
+
 
    print_head  " <<<<<<< Installing Nginx >>>>>>> "
    dnf install mongodb-org-shell -y &>>${log_file}
@@ -150,7 +153,6 @@ python() {
    print_head "download dependencies & Packages"
    pip3.6 install -r requirements.txt &>>{log_file}
    status_check $?
-
 
    systemd_setup
 }
