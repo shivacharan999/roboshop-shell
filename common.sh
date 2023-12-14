@@ -53,13 +53,13 @@ if [ ${schema_setup} == "mongo" ]; then
    mongo --host 172.31.37.3 </app/schema/${component}.js &>>${log_file}
    status_check $?
 
-elif [ "${schema_setup}" == "mysql" ]; then
+elif [ ${schema_setup} == "mysql" ]; then
    print_head " <<<<<<< Installing Mysql >>>>>>> "
    yum install mysql -y  &>>${log_file}
    status_check $?
     
    print_head " <<<<<<< Load Schema >>>>>>> "
-   mysql -h <MYSQL-SERVER-IPADDRESS> -uroot -p${mysql_root_password} < /app/schema/shipping.sql 
+   mysql -h 172.31.24.175 -uroot -p${mysql_root_password} < /app/schema/shipping.sql  &>>${log_file}
    status_check $?
 
 fi
