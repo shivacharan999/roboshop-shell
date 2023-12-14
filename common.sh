@@ -5,3 +5,13 @@ rm -f ${log_file}
 print_head() {
     echo -e "\e[36m$1\e[0m"
 }
+
+
+status_check()
+if { $? -eq 0}; then
+   echo SUCESS
+else
+   echo FAILURE
+   exit
+fi
+}
