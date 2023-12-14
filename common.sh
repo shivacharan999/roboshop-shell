@@ -39,7 +39,7 @@ fi
 
 schema_setup() {
 
-if [ "${schema_setup}" == "mongo"]; then
+if [ ${schema_setup} == "mongo" ]; then
    print_head  " <<<<<<< Installing Nginx >>>>>>> "
    cp ${code_dir}/configs/mongodb.repo /etc/yum.repos.d/mongo.repo &>>${log_file}
    status_check $?
