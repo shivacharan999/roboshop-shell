@@ -1,10 +1,4 @@
-code_dir=$(pwd)
-log_file=/tmp/robodhop.log
-rm-rf ${log_file}
-
-print_head() {
-    echo -e "\e[36m$1\e[0m"
-}
+source common.sh
 
 print_head  " <<<<<<< cp configs/mongodb.repo >>>>>>> "
 cp ${code_dir}/configs/mongodb.repo /etc/yum.repos.d/mongo.repo &>>${log_file}
