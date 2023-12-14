@@ -113,11 +113,12 @@ nodejs() {
    print_head  " <<<<<<< Installing nodejs dependencies >>>>>>> "
    npm install &>>${log_file}
    status_check $?
-
+            
+   schema_setup
 
    systemd_setup
 
-   schema_setup
+ 
 
 }
 
