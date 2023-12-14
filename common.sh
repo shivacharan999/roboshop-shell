@@ -50,7 +50,7 @@ if [ "$(schema_setup)" == "mongo"]; then
    status_check $?
 
    print_head  " <<<<<<< Installing Nginx >>>>>>> "
-   mongo --host 172.31.37.86 </app/schema/${component}.js &>>${log_file}
+   mongo --host 172.31.37.3 </app/schema/${component}.js &>>${log_file}
    status_check $?
 
 elif [ "${schema_setup}" == "mysql" ]; then
