@@ -1,4 +1,4 @@
-code_dir=$(pwd)
+
 echo -e "\e[35m <<<<<<< Installing Nginx >>>>>>> \e[0m"
 dnf install nginx -y 
 
@@ -14,7 +14,7 @@ cd /usr/share/nginx/html
 unzip /tmp/frontend.zip
 
 echo -e "\e[35m <<<<<<< cp roboshop.conf file to system >>>>>>> \e[0m"
-cp ${code_dir}/configs/nginx-roboshop.conf /etc/nginx/default.d/roboshop.conf
+cp configs/nginx-roboshop.conf /etc/nginx/default.d/roboshop.conf
 
 echo -e "\e[35m <<<<<<< Enable and restart the nginx >>>>>>> \e[0m"
 systemctl enable nginx 
