@@ -7,9 +7,9 @@ print_head() {
 }
 
 
-status_check()
-if { $? -eq 0}; then
-   echo SUCESS
+status_check() {
+if [ $? -eq 0 ]; then
+   echo SUCCESS
 else
    echo FAILURE
    exit 1
