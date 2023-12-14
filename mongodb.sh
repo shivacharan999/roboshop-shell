@@ -4,9 +4,13 @@ print_head  " <<<<<<< cp configs/mongodb.repo >>>>>>> "
 cp ${code_dir}/configs/mongodb.repo /etc/yum.repos.d/mongo.repo &>>${log_file}
 
 print_head  " <<<<<<< install mongodb-org >>>>>>> "
-yum install mongodb-org -y  &>>${log_file}
+yum install mongodb-org -y  &>>${log_file} 
 
-print_head  " <<<<<<< enable mongod x >>>>>>> "
+
+print_head  " <<<<<<< Update mongodb listen Address >>>>>>> "
+sed -i -e 's/127.0.0.1/0.0.0.0/' &>>${log_file}
+
+print_head  " <<<<<<< enable mongod  >>>>>>> "
 systemctl enable mongod  &>>${log_file}
 
 print_head  " <<<<<<< start mongod  >>>>>>> "
