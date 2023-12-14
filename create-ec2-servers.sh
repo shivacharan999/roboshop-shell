@@ -1,8 +1,8 @@
 #!/bin/bash
 
 ##### Change these values ###
-ZONE_ID="Z03088242QQ20LKKZLQT6"
-DOMAIN="devsig90.com"
+ZONE_ID="Z050249122YGPFCQEASIN"
+DOMAIN="devsig90.online"
 SG_NAME="ALLOW_ALL"
 #############################
 
