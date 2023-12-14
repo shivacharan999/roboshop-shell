@@ -12,6 +12,6 @@ if { $? -eq 0}; then
    echo SUCESS
 else
    echo FAILURE
-   exit
+   exit 1
 fi
 }
