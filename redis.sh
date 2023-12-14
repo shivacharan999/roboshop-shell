@@ -23,5 +23,5 @@ systemctl enable redis  &>>${log_file}
 status_check $?
 
 print_head  " <<<<<<< Installing Nginx >>>>>>> "
-systemctl start redis  &>>${log_file}
+systemctl restart redis  &>>${log_file}
 status_check $?
