@@ -4,7 +4,7 @@ Description=Payment Service
 [Service]
 User=root
 WorkingDirectory=/app
-Environment=CART_HOST=<CART-SERVER-IPADDRESS>
+Environment=CART_HOST=172.31.36.222
 Environment=CART_PORT=8080
 Environment=USER_HOST=172.31.47.231
 Environment=USER_PORT=8080
