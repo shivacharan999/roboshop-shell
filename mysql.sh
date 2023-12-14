@@ -5,7 +5,7 @@ mysql_root_password=$1
 if [ -z "${mysql_root_password}" ]
   echo -e "\e[31mNeed Mysql Root Password\e[0m"
   exit 1
-fi
+
 
 
 print_head  " <<<<<<< downloading Mysql >>>>>>> "
