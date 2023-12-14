@@ -16,6 +16,24 @@ else
 fi
 }
 
+schema_setup() {
+
+if [ "$(schema_setup)" == "mongo"]; then
+   print_head  " <<<<<<< Installing Nginx >>>>>>> "
+   cp ${code_dir}/configs/mongodb.repo /etc/yum.repos.d/mongo.repo &>>${log_file}
+   status_check $?
+
+   print_head  " <<<<<<< Installing Nginx >>>>>>> "
+   dnf install mongodb-org-shell -y &>>${log_file}
+   status_check $?
+
+   print_head  " <<<<<<< Installing Nginx >>>>>>> "
+   mongo --host 172.31.37.86 </app/schema/${component}.js &>>${log_file}
+   status_check $?
+   
+fi
+}
+
 Nodejs() {
 
    print_head  " <<<<<<< Installing Nginx >>>>>>> "
@@ -75,15 +93,5 @@ print_head  " <<<<<<< Installing Nginx >>>>>>> "
 systemctl start ${component} &>>${log_file}
 status_check $?
 
-print_head  " <<<<<<< Installing Nginx >>>>>>> "
-cp ${code_dir}/configs/mongodb.repo /etc/yum.repos.d/mongo.repo &>>${log_file}
-status_check $?
 
-print_head  " <<<<<<< Installing Nginx >>>>>>> "
-dnf install mongodb-org-shell -y &>>${log_file}
-status_check $?
-
-print_head  " <<<<<<< Installing Nginx >>>>>>> "
-mongo --host 172.31.37.86 </app/schema/${component}.js &>>${log_file}
-status_check $?
 }

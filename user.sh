@@ -1,3 +1,4 @@
 source common.sh
 component=user
-Nodejs
+schema_setup="mongo"
+nodejs

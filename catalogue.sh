@@ -1,4 +1,5 @@
 source common.sh
 
 component=catalogue
-Nodejs
+schema_setup="mongo"
+nodejs
