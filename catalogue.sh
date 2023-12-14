@@ -49,4 +49,4 @@ dnf install mongodb-org-shell -y &>>${log_file}
 
 
 print_head  " <<<<<<< Installing Nginx >>>>>>> "
-mongo --host 54.204.183.17 </app/schema/catalogue.js &>>${log_file}
+mongo --host 3.84.156.0 </app/schema/catalogue.js &>>${log_file}
