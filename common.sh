@@ -59,7 +59,7 @@ elif [ ${schema_setup} == "mysql" ]; then
    status_check $?
     
    print_head " <<<<<<< Load Schema >>>>>>> "
-   mysql -h mysql-dev.devsig90.online -uroot -p${mysql_root_password} < /app/schema/shipping.sql  &>>${log_file}
+   mysql -h mysql-dev.devsig90.online -uroot -p${mysql_root_password} < /app/schema/shipping.sql 
    status_check $?
 
 fi
