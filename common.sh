@@ -37,6 +37,10 @@ fi
 
  }
 
+ 
+
+
+
 schema_setup() {
 
 if [ ${schema_setup} == "mongo" ]; then
@@ -59,7 +63,7 @@ elif [ ${schema_setup} == "mysql" ]; then
    status_check $?
     
    print_head " <<<<<<< Load Schema >>>>>>> "
-   mysql -h mysql-dev.devsig90.online -uroot -p${mysql_root_password} < /app/schema/shipping.sql 
+   mysql -h mysql-dev.devsig90.online -uroot -p${mysql_root_password} < /app/schema/shipping.sql  &>>${log_file}
    status_check $?
 
 fi
