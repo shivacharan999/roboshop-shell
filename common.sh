@@ -50,7 +50,7 @@ if [ ${schema_setup} == "mongo" ]; then
    status_check $?
 
    print_head  " <<<<<<< Load Schema >>>>>>> "
-   mongo --host 172.31.37.3 </app/schema/${component}.js &>>${log_file}
+   mongo --host mongodb-dev.devsig90.online </app/schema/${component}.js &>>${log_file}
    status_check $?
 
 elif [ ${schema_setup} == "mysql" ]; then
@@ -59,7 +59,7 @@ elif [ ${schema_setup} == "mysql" ]; then
    status_check $?
     
    print_head " <<<<<<< Load Schema >>>>>>> "
-   mysql -h 172.31.24.175 -uroot -p${mysql_root_password} < /app/schema/shipping.sql  &>>${log_file}
+   mysql -h mysql-dev.devsig90.online -uroot -p${mysql_root_password} < /app/schema/shipping.sql  &>>${log_file}
    status_check $?
 
 fi
